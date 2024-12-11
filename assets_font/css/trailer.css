@@ -1,0 +1,74 @@
+
+  .trailer-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+  }
+
+  /* Play icon styling */
+  .play-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #a5a5a5; /* Play icon color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .play-icon::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid rgb(255, 255, 255);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+  }
+
+  /* Text and underline styling */
+  .trailer-text {
+    position: relative;
+    color: black;
+  }
+
+  .trailer-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+
+  /*  */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Màu nền mờ */
+    display: none;
+    z-index: 999;
+    /* Đưa overlay lên trên cùng */
+}
+
+#trailerContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Giữa trang */
+    z-index: 1000;
+    /* Đưa video lên trên overlay */
+}
